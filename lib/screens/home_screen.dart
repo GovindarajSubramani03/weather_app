@@ -39,6 +39,17 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  String greeting() {
+    var hour = DateTime.now().hour;
+    if (hour <= 12) {
+      return 'Morning';
+    } else if (hour <= 17) {
+      return 'Afternoon';
+    } else {
+      return 'Evening';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 8,
                           ),
                           Text(
-                            'Good Morning',
+                            'Good ${greeting()}',
                             style: GoogleFonts.robotoMono(
                               textStyle: const TextStyle(
                                   fontSize: 25,
