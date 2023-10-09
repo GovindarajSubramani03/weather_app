@@ -315,14 +315,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     );
                   } else {
-                    return Container(
-                      child: const Text(
-                        'Oops! Unable to Fetch the location',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 20),
-                      ),
+                    return const Text(
+                      'Oops! Unable to Fetch the location',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20),
                     );
                   }
                 },
